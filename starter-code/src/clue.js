@@ -1,4 +1,5 @@
 // ITERATION 1
+// Suspects Collection
 let suspectsArray = [
     {
     firstName: 'Jacob',
@@ -44,8 +45,8 @@ let suspectsArray = [
     description: 'She is from a wealthy family and uses her status and money to earn popularity',
     image: 'https://metrouk2.files.wordpress.com/2016/07/mrs-peacock.jpg',
     color: 'blue',
-    },
-    {
+},
+{
     firstName: 'Jack',
     lastName: 'Mustard',
     occupaion: 'Retired Football player',
@@ -53,107 +54,77 @@ let suspectsArray = [
     description: 'He is a former football player who tries to get by on his former glory',
     image: 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg',
     color: 'yellow',    
-    }
-]
-
-let weaponsArray = [
-    {
-    name: 'rope',
-    weight: 10,
-    },
-    {
-    name: 'knife',
-    weight: 8,
-    },
-    {
-    name: 'candlestick',
-    weight: 2,       
-    },
-    {
-    name: 'dumbbell',
-    weight: 30,       
-    },
-    {      
-    name: 'poison',
-    weight: 2,
-    },
-    {
-    name: 'axe',
-    weight: 15,      
-    },
-    {      
-    name: 'bat',
-    weight: 13,
-    },
-    {   
-    name: 'trophy',
-    weight: 25,
-    },
-    {        
-    name: 'pistol',
-    weight: 20,
-    }
-]
-
-let roomsArray = [
-    {
-    name: 'Dining Room'
-    },
-    {
-    name: 'Conservatory'
-    },
-    {
-    name: 'Kitchen'
-    },
-    {
-    name: 'Study'
-    },
-    {
-    name: 'Library'
-    },
-    {
-    name: 'Billiard Room'
-    },
-    {
-    name: 'Lounge'
-    },
-    {
-    name: 'Ballroom'
-    },
-    {
-    name: 'Hall'
-    },
-    {
-    name: 'Spa'
-    },
-    {
-    name: 'Living Room'
-    },
-    {
-     name: 'Observatory'
-    },
-    {
-    name: 'Theater'
-    },
-    {
-    name: 'Guest House'
-    },
-    {
-    name: 'Patio'
-    }
-]
-// Suspects Collection
-const suspectsArray = [];
-
-// Rooms Collection
-const roomsArray = [];
+}
+];
 
 // Weapons Collection
-const weaponsArray = [];
+let weaponsArray = [
+    {
+        name: 'rope',
+        weight: 10,
+    },
+    {
+        name: 'knife',
+        weight: 8,
+    },
+    {
+        name: 'candlestick',
+        weight: 2,       
+    },
+    {
+        name: 'dumbbell',
+        weight: 30,       
+    },
+    {      
+        name: 'poison',
+        weight: 2,
+    },
+    {
+        name: 'axe',
+        weight: 15,      
+    },
+    {      
+        name: 'bat',
+        weight: 13,
+    },
+    {   
+        name: 'trophy',
+        weight: 25,
+    },
+    {name: 'pistol',  weight: 20,}
+];
+
+// Rooms Collection
+let roomsArray = [
+    {name: 'Dining Room'},
+    {name: 'Conservatory'},
+    {name: 'Kitchen'},
+    {name: 'Study'},
+    {name: 'Library'},
+    {name: 'Billiard Room'},
+    {name: 'Lounge'},
+    {name: 'Ballroom'},
+    {name: 'Hall'},
+    {name: 'Spa'},
+    {name: 'Living Room'},
+    {name: 'Observatory'},
+    {name: 'Theater'},
+    {name: 'Guest House'},
+    {name: 'Patio'}
+];
 
 // ITERATION 2
-function selectRandom(anArray){
-    Math.random
+function selectRandom(Array){
+    let randNum = Math.floor((Math.random() * array.length))
+    return array[randNum];
+};
+
+function pickMystery(){
+    return{
+        suspet: selectRandom(suspectsArray),
+        weapon: selectRandom(weaponsArray),
+        room: selectRandom(roomsArray),
+    }
 }
 
 
