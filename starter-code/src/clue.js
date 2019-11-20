@@ -114,18 +114,27 @@ let roomsArray = [
 ];
 
 // ITERATION 2
-function selectRandom(Array){
-    let randNum = Math.floor((Math.random() * array.length))
-    return array[randNum];
+function selectRandom(anArray){
+    let randNum = Math.floor((Math.random() * anArray.length))
+    return anArray[randNum];
 };
 
+let envelope = {
+
+};
+
+
+
 function pickMystery(){
-    return{
-        suspet: selectRandom(suspectsArray),
+    return envelope = {
+        suspect: selectRandom(suspectsArray),
         weapon: selectRandom(weaponsArray),
         room: selectRandom(roomsArray),
     }
-}
-
+};
 
 // ITERATION 3
+function revealMystery(){
+    // <FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>!
+    return ('$(envelope.suspect.firstName) $(envelope.suspect.lastName) killed Mr. Boddy using the $(envelope.weapon) in the $(envelope.room)!')
+}
