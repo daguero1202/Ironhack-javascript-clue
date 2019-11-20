@@ -119,12 +119,6 @@ function selectRandom(anArray){
     return anArray[randNum];
 };
 
-let envelope = {
-
-};
-
-
-
 function pickMystery(){
     return envelope = {
         suspect: selectRandom(suspectsArray),
@@ -133,8 +127,10 @@ function pickMystery(){
     }
 };
 
+
 // ITERATION 3
-function revealMystery(){
-    // <FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <ROOM>!
-    return ('$(envelope.suspect.firstName) $(envelope.suspect.lastName) killed Mr. Boddy using the $(envelope.weapon) in the $(envelope.room)!')
+function revealMystery(envelope){
+    return (`${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`)
 }
+
+revealMystery(envelope)
